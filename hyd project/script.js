@@ -1,7 +1,8 @@
 // script.js
 
 // Sign Up Functionality
- function signup() {
+ // Updated Sign Up Functionality
+function signup() {
     const username = document.getElementById('signup-username').value;
     const password = document.getElementById('signup-password').value;
   
@@ -24,6 +25,8 @@
   
     localStorage.setItem(username, JSON.stringify(userData));
     alert('Sign-up successful! Redirecting to login page...');
+    
+    // Redirect to login page
     window.location.href = './login.html';
   }
   
