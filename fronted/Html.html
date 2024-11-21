@@ -6,249 +6,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Introduction</title>
     <style>
-        /* Section Style */
-        .section {
-            background-color: #ffffff;
-            padding: 40px;
-            margin: 40px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Heading Styles */
-        h2, h3, h1 {
-            color: #1e2a3a;
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin-top: 30px;
-            text-align: left;
-        }
-        
-        /* Paragraphs and Strong Text */
-        p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        
-        strong {
-            color: #00bcd4;
-            font-weight: bold;
-        }
-        
-        /* Code and Preformatted Text */
-        pre {
-            background-color: #2e3b47;
-            color: #e0e0e0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            overflow-x: auto;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        
-        code {
-            font-family: 'Courier New', Courier, monospace;
-            color: #e0e0e0;
-            background-color: #2e3b47;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        
-        pre code {
-            display: block;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        
-        /* List Styles */
-        ul {
-            list-style-type: disc;
-            margin-left: 40px;
-            font-size: 1.1rem;
-        }
-        
-        ul li {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-        
-        /* Callout Section */
-        h2 + p {
-            font-size: 1.2rem;
-            color: #00bcd4;
-            font-weight: bold;
-        }
-        
-        /* Button or Actions Section */
-        h3 + p {
-            font-size: 1.1rem;
-            color: #333;
-            margin-top: 15px;
-        }
-        
-        /* Code Block Section */
-        h3 + p + pre {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-left: 4px solid #00bcd4;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .section {
-                padding: 20px;
-            }
-        
-            h2, h3, h1 {
-                font-size: 1.8rem;
-            }
-        
-            ul {
-                margin-left: 20px;
-            }
-        }
-        
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+            /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
-        h1, h2 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+h1, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
 
-        a:hover {
-            color: #0056b3;
-        }
+a:hover {
+    color: #0056b3;
+}
 
-        /* Header Styles */
-        header {
-            background-color: #004A6C;
-            color: rgb(255, 255, 255);
-            padding: 20px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+/* Header Styles */
+header {
+    background-color: #004A6C;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-        header .logo h1 {
-            font-size: 2.5em;
-            text-align: center;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin: 0;
-            animation: fadeIn 1.5s ease-in;
-        }
+header .logo h1 {
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in;
+}
 
-        header nav {
-            text-align: center;
-            margin-top: 10px;
-        }
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
 
-        header nav ul {
-            list-style: none;
-        }
+header nav ul {
+    list-style: none;
+}
 
-        header nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
 
-        header nav ul li a {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: white;
-            transition: color 0.3s ease;
-        }
+header nav ul li a {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s ease;
+}
 
-        header nav ul li a:hover {
-            color: #ffcc00;
-        }
+header nav ul li a:hover {
+    color: #ffcc00;
+}
 
-        /* Footer */
-        footer {
-            background-color: #004A6C;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 1.2em;
-            margin-top: 40px;
-        }
+/* Section Styles */
+.section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1100px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        footer p {
-            margin: 0;
-        }
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
 
-        /* Animations */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header .logo h1 {
-                font-size: 2em;
-            }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-            header nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
+ul li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
 
-            .section {
-                padding: 30px;
-            }
+ul li a {
+    color: #004A6C;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
 
-            #editor {
-                padding: 30px;
-            }
-        }
+ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Try It Yourself Section */
+#editor {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+#editor textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
+    resize: vertical;
+}
+
+#editor button {
+    padding: 15px 20px;+
+    +
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#editor button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #004A6C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    #editor {
+        padding: 30px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -258,14 +213,16 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#C">C</a></li>
-                <li><a href="#C++">C++</a></li>
-                <li><a href="#Java">JAVA</a></li>
-                <li><a href="#Python">PYTHON</a></li>
-                <li><a href="#html">HTML</a></li>
-                <li><a href="#css">CSS</a></li>
-                <li><a href="#javascript">JAVASCRIPT</a></li>
+                <li><a href="homepage1.html">HOME</a></li>
+                <li><a href="C.html">C</a></li>
+                <li><a href="C++.html">C++</a></li>
+                <li><a href="java.html">JAVA</a></li>
+                <li><a href="python.html">PYTHON</a></li>
+                <li><a href="Html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="javaScript.html">JAVASCRIPT</a></li>
+                <li><a href ="login.html">Login</a></li>
+                <li><a href ="signup.html">Signup</a></li>
             </ul>
         </nav>
     </header>
