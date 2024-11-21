@@ -12,34 +12,34 @@
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
-
+        
         body {
             background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
         }
-
+        
         h1, h2 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         a {
             text-decoration: none;
             color: #007BFF;
         }
-
+        
         a:hover {
             color: #0056b3;
         }
-
+        
         /* Header Styles */
         header {
             background-color: #004A6C;
-            color: rgb(255, 255, 255);
+            color: white;
             padding: 20px 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-
+        
         header .logo h1 {
             font-size: 2.5em;
             text-align: center;
@@ -48,32 +48,32 @@
             margin: 0;
             animation: fadeIn 1.5s ease-in;
         }
-
+        
         header nav {
             text-align: center;
             margin-top: 10px;
         }
-
+        
         header nav ul {
             list-style: none;
         }
-
+        
         header nav ul li {
             display: inline-block;
             margin: 0 15px;
         }
-
+        
         header nav ul li a {
             font-size: 1.2em;
             font-weight: 600;
             color: white;
             transition: color 0.3s ease;
         }
-
+        
         header nav ul li a:hover {
             color: #ffcc00;
         }
-
+        
         /* Section Styles */
         .section {
             padding: 40px;
@@ -84,67 +84,93 @@
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
         .section:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
-
+        
         h2 {
             font-size: 2.5em;
             color: #333;
             text-align: center;
             margin-bottom: 20px;
         }
-
+        
         ul {
             list-style-type: none;
             padding: 0;
         }
-
+        
         ul li {
             margin: 8px 0;
             font-size: 1.1em;
         }
-
+        
         ul li a {
             color: #004A6C;
             font-weight: bold;
             text-transform: capitalize;
             transition: color 0.3s ease;
         }
-
+        
         ul li a:hover {
             color: #ffcc00;
         }
-
-        /* Code Block Section */
-        pre {
-            background-color: #2e3b47;
-            color: #e0e0e0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            overflow-x: auto;
-            font-size: 1rem;
-            line-height: 1.6;
+        
+        /* Try It Yourself Section */
+        #editor {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 40px;
+            margin-top: 30px;
         }
-
-        code {
-            font-family: 'Courier New', Courier, monospace;
-            color: #e0e0e0;
-            background-color: #2e3b47;
-            padding: 5px 10px;
+        
+        #editor textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #333;
+            border: 1px solid #555;
+            color: #fff;
             border-radius: 4px;
+            font-size: 1.1em;
+            font-family: 'Courier New', Courier, monospace;
+            resize: vertical;
         }
-
-        pre code {
-            display: block;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+        
+        #editor button {
+            padding: 15px 20px;
+            
+            background-color: #007BFF;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-
-
+        
+        #editor button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #004A6C;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
         /* Animations */
         @keyframes fadeIn {
             0% {
@@ -156,47 +182,50 @@
                 transform: translateY(0);
             }
         }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             header .logo h1 {
                 font-size: 2em;
             }
-
+        
             header nav ul li {
                 display: block;
                 margin: 10px 0;
             }
-
+        
             .section {
                 padding: 30px;
             }
-
+        
             #editor {
                 padding: 30px;
             }
         }
+        
     </style>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>Adhyayan</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#C">C</a></li>
-                <li><a href="#C++">C++</a></li>
-                <li><a href="#Java">JAVA</a></li>
-                <li><a href="#Python">PYTHON</a></li>
-                <li><a href="#html">HTML</a></li>
-                <li><a href="#css">CSS</a></li>
-                <li><a href="#javascript">JAVASCRIPT</a></li>
-            </ul>
-        </nav>
-    </header>
-
+        </head>
+        <body>
+            <header>
+                <div class="logo">
+                    <h1>Adhyayan</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="homepage1.html">HOME</a></li>
+                        <li><a href="C.html">C</a></li>
+                        <li><a href="C++.html">C++</a></li>
+                        <li><a href="java.html">JAVA</a></li>
+                        <li><a href="python.html">PYTHON</a></li>
+                        <li><a href="Html.html">HTML</a></li>
+                        <li><a href="css.html">CSS</a></li>
+                        <li><a href="javaScript.html">JAVASCRIPT</a></li>
+                        <li><a href ="login.html">Login</a></li>
+                        <li><a href ="signup.html">Signup</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
     <section id="javascript" class="section">
         <h2>JavaScript Introduction</h2>
         <p>JavaScript is a versatile programming language primarily used to add interactive behavior to websites. Developed by Brendan Eich in 1995, JavaScript has become a core technology of web development along with HTML and CSS.</p>

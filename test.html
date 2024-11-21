@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+</head>
+
+<style>
+/* Reset Styles */
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Page Container */
+.page {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease;
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+}
+
+/* Placeholder Color */
+input::placeholder {
+    color: #999;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Link Styles */
+a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Text */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .page {
+        padding: 20px 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+
+    
+</style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>Adhyayan</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homepage1.html">HOME</a></li>
+                    <li><a href="C.html">C</a></li>
+                    <li><a href="C++.html">C++</a></li>
+                    <li><a href="java.html">JAVA</a></li>
+                    <li><a href="python.html">PYTHON</a></li>
+                    <li><a href="Html.html">HTML</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="javaScript.html">JAVASCRIPT</a></li>
+                    <li><a href ="login.html">Login</a></li>
+                    <li><a href ="signup.html">Signup</a></li>
+                </ul>
+            </nav>
+        </header>
+<body>
+  <div class="page">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-username" placeholder="Username" />
+    <input type="password" id="signup-password" placeholder="Password" />
+    <button onclick="signup()">Sign Up</button>
+    <p>Already have an account? <a href="./login.html">Login</a></p>
+  </div>
+  <script src="/script.js"></script>
+  <script src="./web3.js"></script> 
+</body>
+</html>
