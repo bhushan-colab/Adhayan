@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Introduction</title>
+    <style>
+        /* Section Style */
+        .section {
+            background-color: #ffffff;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Heading Styles */
+        h2, h3, h1 {
+            color: #1e2a3a;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        /* Paragraphs and Strong Text */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        strong {
+            color: #00bcd4;
+            font-weight: bold;
+        }
+        
+        /* Code and Preformatted Text */
+        pre {
+            background-color: #2e3b47;
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            background-color: #2e3b47;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        pre code {
+            display: block;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        /* List Styles */
+        ul {
+            list-style-type: disc;
+            margin-left: 40px;
+            font-size: 1.1rem;
+        }
+        
+        ul li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        /* Callout Section */
+        h2 + p {
+            font-size: 1.2rem;
+            color: #00bcd4;
+            font-weight: bold;
+        }
+        
+        /* Button or Actions Section */
+        h3 + p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-top: 15px;
+        }
+        
+        /* Code Block Section */
+        h3 + p + pre {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section {
+                padding: 20px;
+            }
+        
+            h2, h3, h1 {
+                font-size: 1.8rem;
+            }
+        
+            ul {
+                margin-left: 20px;
+            }
+        }
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #004A6C;
+            color: rgb(255, 255, 255);
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo h1 {
+            font-size: 2.5em;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004A6C;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .logo h1 {
+                font-size: 2em;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .section {
+                padding: 30px;
+            }
+
+            #editor {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Adhyayan</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#C++">C++</a></li>
+                <li><a href="#Java">JAVA</a></li>
+                <li><a href="#Python">PYTHON</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">JAVASCRIPT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="html" class="section">
+        <h2>HTML Introduction</h2>
+        <p>HTML (HyperText Markup Language) is the standard language used for creating web pages. It forms the foundation of web development and is used to structure content on the web.</p>
+
+        <h3>Basic Syntax of HTML</h3>
+        <p>Here is a simple example of an HTML document structure:</p>
+        <pre>
+<code>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is my first web page created with HTML.</p>
+</body>
+</html>
+</code>
+        </pre>
+
+        <p><strong>Why Learn HTML?</strong></p>
+        <ul>
+            <li>HTML is the foundation of web development.</li>
+            <li>It is easy to learn and understand.</li>
+            <li>HTML allows you to create structured content for websites.</li>
+        </ul>
+
+        <h1><strong>HTML Elements</strong></h1>
+        <p>Some essential HTML elements:</p>
+        <ul>
+            <li><strong>&lt;html&gt;:</strong> The root element that defines the HTML document.</li>
+            <li><strong>&lt;head&gt;:</strong> Contains metadata and links to external resources.</li>
+            <li><strong>&lt;body&gt;:</strong> Contains the visible content of the webpage.</li>
+            <li><strong>&lt;h1&gt; to &lt;h6&gt;:</strong> Define headings with different levels.</li>
+            <li><strong>&lt;p&gt;:</strong> Defines a paragraph of text.</li>
+            <li><strong>&lt;a&gt;:</strong> Defines a hyperlink to other pages.</li>
+            <li><strong>&lt;ul&gt; &lt;ol&gt;:</strong> Define unordered and ordered lists.</li>
+            <li><strong>&lt;img&gt;:</strong> Embeds an image in the page.</li>
+        </ul>
+
+        <h2>HTML Example: A Simple Web Page</h2>
+        <pre>
+<code>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is my first web page created with HTML.</p>
+</body>
+</html>
+</code>
+        </pre>
+
+        <h3>Explanation of the Program:</h3>
+        <p>The <code>&lt;html&gt;</code> element is the root element that wraps the entire HTML document. Inside <code>&lt;head&gt;</code>, we include the <code>&lt;title&gt;</code> element to give the web page a title. The <code>&lt;body&gt;</code> element contains the actual content that will be visible on the webpage, such as the heading and paragraph.</p>
+
+        <h3>How to View HTML in a Browser:</h3>
+        <p>1. Save the code in a file with a <code>.html</code> extension (e.g., <code>index.html</code>).</p>
+        <p>2. Open the file in a web browser to see the result.</p>
+        <h2>Output:</h2>
+        <p>Welcome to My Website</p>
+        <p>This is my first web page created with HTML.</p>
+    </section>
+
+</body>
+</html>
