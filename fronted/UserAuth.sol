@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Unidentified
 pragma solidity ^0.8.0;
 
-contract Auth {
+contract UserAuth {
     struct User {
         string username;
         string password;
