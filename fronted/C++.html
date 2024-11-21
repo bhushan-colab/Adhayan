@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>* Section Style */
+    .section {
+        background-color: #ffffff;
+        padding: 40px;
+        margin: 40px auto;
+        max-width: 1200px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Heading Styles */
+    h2, h3, h1 {
+        color: #1e2a3a;
+        font-weight: 600;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 30px;
+        text-align: left;
+    }
+    
+    /* Paragraphs and Strong Text */
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    strong {
+        color: #00bcd4;
+        font-weight: bold;
+    }
+    
+    /* Code and Preformatted Text */
+    pre {
+        background-color: #2e3b47;
+        color: #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        overflow-x: auto;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    code {
+        font-family: 'Courier New', Courier, monospace;
+        color: #e0e0e0;
+        background-color: #2e3b47;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+    
+    pre code {
+        display: block;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    
+    /* List Styles */
+    ul {
+        list-style-type: disc;
+        margin-left: 40px;
+        font-size: 1.1rem;
+    }
+    
+    ul li {
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+    
+    /* Callout Section */
+    h2 + p {
+        font-size: 1.2rem;
+        color: #00bcd4;
+        font-weight: bold;
+    }
+    
+    /* Button or Actions Section */
+    h3 + p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-top: 15px;
+    }
+    
+    /* Code Block Section */
+    h3 + p + pre {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-left: 4px solid #00bcd4;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .section {
+            padding: 20px;
+        }
+    
+        h2, h3, h1 {
+            font-size: 1.8rem;
+        }
+    
+        ul {
+            margin-left: 20px;
+        }
+    }
+     /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header Styles */
+header {
+    background-color: #004A6C;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Section Styles */
+.section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1100px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+ul li a {
+    color: #004A6C;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Try It Yourself Section */
+#editor {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+#editor textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
+    resize: vertical;
+}
+
+#editor button {
+    padding: 15px 20px;+
+    +
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#editor button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #004A6C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    #editor {
+        padding: 30px;
+    }
+}
+</style>
+
+<body>
+    
+    <header>
+        <div class="logo">
+            <h1>Adhyayan</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#C++">C++</a></li>
+                <li><a href="#Java">JAVA</a></li>
+                <li><a href="#Python">PYTHON</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">JAVASCRIPT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="C++" class="section">
+        <h2>C++ Introduction</h2>
+        <p><strong>C++ </strong> is a high-performance, general-purpose programming language that has been widely used for system/software development, game programming, and applications requiring real-time processing. It was developed by Bjarne Stroustrup at Bell Labs in the early 1980s as an extension of the C language, incorporating object-oriented programming (OOP) features, such as classes, inheritance, and polymorphism. C++ has since evolved into one of the most powerful and versatile languages in use today.
+            </p>
+    
+        <h3>Basic Syntax of C++ </h3>
+        <p>Here’s a simple example of a C++ program that prints "Hello, World!" to the screen:    </p>
+        <pre>
+    <code>
+        #include <iostream>  // Standard input-output library
+    
+            // Main function
+            int main() {
+                std::cout << "Hello, World!" << std::endl;  // Output message
+                return 0;  // Return success code
+            }
+            </code>
+        </pre>
+    
+        <p><strong>Why Learn C++ ?</strong></p>
+        <br><strong> 1.Performance and Efficiency</strong></br>
+            <br>1.High Performance:C++ is known for its speed and performance. Since it is a compiled language, it is converted directly into machine code, making it faster than interpreted languages like Python or JavaScript. This makes it ideal for applications where performance is critical, such as real-time systems, video games, and high-frequency trading systems.</br>
+           2. Low-Level Memory Management: C++ provides direct control over system resources like memory (via pointers, manual memory allocation, and deallocation). This ability to fine-tune memory management allows for more efficient and optimized code, particularly in performance-sensitive applications.
+            </p>
+        <p><strong>2.Wide Applicability</strong> </p>
+           <p> C++ is used in a wide variety of domains and industries:
+            
+           <br>1.System Software: Operating systems, device drivers, and embedded systems are often written in C++ because it allows low-level system control.
+            Game Development: Many high-performance games, including AAA titles, are developed using C++ because of its high performance and control over system resources (e.g., graphics, memory).</br>
+            2.Real-Time Applications: C++ is used in industries like automotive, aerospace, and robotics, where real-time processing and low-latency responses are crucial.
+            Finance and Trading: C++ is heavily used in the finance industry for building high-performance systems such as algorithmic trading platforms and risk management tools.
+           <br>3.Game Development: Many high-performance games, including AAA titles, are developed using C++ because of its high performance and control over system resources (e.g., graphics, memory).</br>
+        <p><strong>3.Object-Oriented Programming (OOP)</strong></p>
+            C++ introduced object-oriented features to the C language, and it supports powerful OOP paradigms such as:
+            <br>1.Encapsulation: Grouping related data and functions together into classes.</br>
+                2.Inheritance: Creating new classes from existing ones to promote code reuse.</br>
+                3.Polymorphism: Allowing objects to be treated as instances of their parent class, enabling dynamic method invocation.</br>
+                4.Learning C++ helps you develop an in-depth understanding of OOP principles, which are widely used in many modern programming languages.
+            </p>
+             </ul>
+    
+        <h1><strong> C++ Elements</strong></h1>
+        <p>Summary of Key C++ Elements:</p>
+            <li><strong>1. Keywords:-</strong> 
+            <br>int, float, char (data types)</br>
+            if, else, switch (conditional statements)</br>
+            for, while, do (looping constructs)</br>
+            class, public, private (class structure and access control)</br>
+            new, delete (memory management)</br>
+            return, void, static, virtual (control flow and function attributes)</li></br>
+            <li><strong>2.Data Types:-</strong><br>C++ supports a variety of built-in data types, allowing you to store different kinds of values in variables. Some common data types are:
+            </li><strong>
+            Primitive Types:</strong></br>
+            int: Integer numbers (e.g., -5, 42)</br>
+            float: Single-precision floating-point numbers (e.g., 3.14, 2.5)</br>
+            double: Double-precision floating-point numbers (e.g., 3.1415926535)</br>
+            char: Single characters (e.g., 'a', 'A', '%')</br>
+            bool: Boolean values (either true or false)</br>
+            <strong>
+            Derived Types:</strong></br>
+            Arrays: Collections of elements of the same data type.</br>
+            Pointers: Variables that store the memory address of another variable.</br>
+            References: Aliases for existing variables.</br>
+            <strong>
+            User-Defined Types:</strong></br>
+            struct: A user-defined data type that groups variables of different types.</br>
+            class: A user-defined type that encapsulates both data and functions.</br>
+            enum: A user-defined type that represents a set of named constants.</p>
+            
+            <li><strong>3.Variables and Constants:-</strong></br>
+            <strong>Variables:</strong>Used to store data that can be modified during program execution. The data type of a variable defines the type of data it can hold.</br>
+            int age = 30;</br>
+            float temperature = 98.6;</br>
+            <strong>Constants:</strong> Variables whose values cannot be changed during program execution, defined using const or constexpr.
+             </li>const double PI = 3.14159;M</br>
+             constexpr int MAX_SIZE = 100;</p>
+             
+            <li><strong>4.Operators:-</strong> C++ provides several types of operators to perform operations on variables and values. </li>
+            <strong> Arithmetic Operators:</strong> Used for basic mathematical operations.</br>
+            int a = 10, b = 5;</br>
+            int sum = a + b;   // Addition</br>
+            int diff = a - b;  // Subtraction</br>
+            int product = a * b; // Multiplication</br>
+            int quotient = a / b; // Division</br>
+            int remainder = a % b; // Modulus</br>
+            <strong> Relational Operators:</strong> Used to compare two values.</br>
+            a > b   // Greater than</br>
+            a < b   // Less than</b>
+            a == b  // Equal to</br>
+            a != b  // Not equal to</b>
+            <strong>Logical Operators:</strong> Used to perform logical operations.</br>
+            a && b  // Logical AND</br>
+            a || b  // Logical OR</br>
+            !a      // Logical NOT</br>
+            <strong>Assignment Operators:</strong> Used to assign values to variables.</br>
+            int a = 5;</br>
+             a += 10;  // a = a + 10</br>
+             a *= 2;   // a = a * 2</br>
+             <strong>Increment and Decrement:</strong> Used to increase or decrease a variable's value by 1.</br>
+             a++;  // Increment a by 1</br>
+             b--;  // Decrement b by 1</br>
+             <strong>Bitwise Operators:</strong> Used for operations on binary numbers.</br>
+             a & b  // Bitwise AND</br>
+             a | b  // Bitwise OR</br>
+             a ^ b  // Bitwise XOR</br>
+             <strong>Ternary Operator:</strong> A shorthand for an if-else statement.</br>
+             int result = (a > b) ? a : b;  // If a > b, result = a, otherwise result = b</br></p>
+    
+            <li><strong>5.Control Structures:-</strong> Control structures are used to control the flow of the program based on conditions or iterations.</li>
+            <strong> Conditional Statements:</strong></br>
+        <strong> if-else:</strong>Executes code based on a condition.</br>
+            if (x > 10) {</br>
+                cout << "x is greater than 10";</br>
+            } else {</br>
+                cout << "x is less than or equal to 10";</br>
+            }</br>
+            <strong> switch: </strong>A more efficient way to handle multiple conditions.</b>
+            switch (day) {</br>
+                case 1:</br>
+                    cout << "Monday";</br>
+                    break;</br>
+                case 2:</br>
+                    cout << "Tuesday";</br>
+                    break;</br>
+                default:</br>
+                    cout << "Invalid day";</br>
+                    break;</br>
+            }</br>
+           <strong> Looping Constructs:</strong> </br>
+    
+           <strong>for:</strong> A loop with a known number of iterations.</br>
+           for (int i = 0; i < 5; ++i) {</br>
+            cout << "i = " << i << endl;</br>
+        }
+        <strong>while:</strong> A loop that continues while a condition is true.  </br>  
+        while (x < 10) {</br>
+            cout << "x = " << x << endl;</br>
+            ++x;</br>
+        }
+        
+        <strong> do-while:</strong> A loop that executes at least once, then checks the condition.</br>
+        do {</br>
+            cout << "x = " << x << endl;</br>
+            ++x;</br>
+        } while (x < 10);</br>
+        <li><strong>6.Functions:-</strong>
+        Functions in C++ are used to group code that performs a specific task. A function in C++ has:</br>
+        
+        A return type (e.g., int, float, void).</br>
+        A name (e.g., add, main).</br>
+        Parameters (optional).</br>
+        A body that contains the function code.</br>
+        Example of a simple function:</br>
+        int add(int a, int b) {</br>
+            return a + b;</br>
+        }</br>
+        
+        int main() {</br>
+            int result = add(3, 4);</br>
+            cout << "Result: " << result;</br>
+            return 0;</br>
+        }</br>
+    
+        </ul>
+    
+        <h2>C++ Example: A Simple hello world program</h2>
+        <pre>
+    <code> #include <iostream>  // Include the iostream library for input/output
+    
+        int main() {  // main function - the entry point of the program
+            std::cout << "Hello, World!" << std::endl;  // Print the message to the console
+            return 0;  // Return 0 to indicate successful execution
+        }
+        
+    </code>
+        </pre>
+    
+        <h3>Explanation of the Program:</h3>
+        <p> 1. #include <iostream>:</br>
+            <li>This line includes the iostream library, which is necessary for input and output operations in C++. Specifically, it provides functionalities for printing output to the console (std::cout) and reading input from the console (std::cin).</li></br>
+          
+            2. int main(): </br>
+        <li> The main() function is the entry point of every C++ program. Execution begins here.</li></br>
+        <li>It has a return type of int because it returns an integer to the operating system when the program finishes running. A return value of 0 usually indicates that the program ran successfully.</li></br>
+            
+           3.std::cout << "Hello, World!" << std::endl;:</br> 
+           <li> std::cout is the standard output stream in C++ used to send output to the console.</li></br>
+            <li> << is the stream insertion operator, which sends the string "Hello, World!" to the std::cout object.</li></br>
+                <li>std::endl is used to insert a newline character and flush the output buffer, ensuring that the output is displayed immediately.</li></br>
+    
+          4.return 0;:
+           <br> This statement signifies the successful completion of the program. The return value 0 is returned to the operating system.</br>
+        </p>
+    
+        <h3>Output :</h3>
+        When you run this program, the output will be:</br>
+        <p> Hello, World!</br>
+    
+        <p>This is the simplest form of a C++ program, demonstrating how to display output to the console.</br>
+        </h2>  
+    </section>
+    
+</body>
+</html>
