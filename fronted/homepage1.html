@@ -335,6 +335,7 @@ footer p {
             var iframe = document.getElementById('result');
             var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
+
             iframeDoc.open();
             iframeDoc.write(`
                 <!DOCTYPE html>
@@ -352,11 +353,11 @@ footer p {
                         ${jsCode}
                     </script>
                 </body>
-                </html>
+                </html> `)
             
             
         
     </script>
-</body>
+ </body>
 </html>
-        
+    
