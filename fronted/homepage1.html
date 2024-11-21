@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhyayan</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header Styles */
+header {
+    background-color: #004A6C;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Section Styles */
+.section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1100px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+ul li a {
+    color: #004A6C;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Try It Yourself Section */
+#editor {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+#editor textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
+    resize: vertical;
+}
+
+#editor button {
+    padding: 15px 20px;+
+    +
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#editor button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #004A6C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    #editor {
+        padding: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Adhyayan</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#C++">C++</a></li>
+                <li><a href="#Java">JAVA</a></li>
+                <li><a href="#Python">PYTHON</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">JAVASCRIPT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h2>Welcome to Adhyayan </h2>
+        <p>Your come to platform to learn web development</p>
+    </section>
+
+    <section id="C" class="section">
+        <h2>C Tutorial</h2>
+        <p>C is a powerful programming language that enables developers to create sophisticated software systems. The language is fast, efficient, and easy to learn, making it a popular choice for many applications. C is also portable, meaning that programs written in C can be easily ported to other platforms.
+        </p>
+        The C language is a high-level, general-purpose programming language. It provides a straightforward, consistent, powerful interface for programming systems. That's why the C language is widely used for developing system software, application software, and embedded systems.
+        <p></p>
+        <ul>
+            <li><a href="./c.html">C Introduction</a></li>
+            <li><a href="./c.html">C Elements</a></li>
+            <li><a href="./c.html">C Attributes</a></li>
+        </ul>
+    </section>
+
+    <section id="C++" class="section">
+        <h2>C++ Tutorial</h2>
+        <p>C++ is used in fields such as system software, game development, embedded systems, scientific computing and high-performance applications. The C++ standard library provides a range of coding utilities and functions, making it easy to develop complex software systems.
+        </p>
+        <p>C++ is a generic programming language for building software. It's an object-oriented language. In other words, it emphasizes using data fields with unique attributes (a.k.a. objects) rather than logic or functions. A common example of an object is a user account on a website.
+        </p>
+        <ul>
+            <li><a href="./C++.html">C++ Introduction</a></li>
+            <li><a href="./C++.html">C++ Elements</a></li>
+            <li><a href="./C++.html">C++ Attributes</a></li>
+        </ul>
+    </section>
+
+    <section id="Java" class="section">
+        <h2>Java Tutorial</h2>
+        <p>One of the most significant advantages of Java is its ability to move easily from one computer system to another. The ability to run the same program on many different systems is crucial to World Wide Web software, and Java succeeds at this by being platform-independent at both the source and binary levels.
+        </p>
+        <p>Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies.
+        </p>
+        <ul>
+            <li><a href="./java.html">Java Introduction</a></li>
+            <li><a href="./java.html">Java Elements</a></li>
+            <li><a href="./java.html">Java Attributes</a></li>
+        </ul>
+    </section>
+
+
+    <section id="Python" class="section">
+        <h2>Python Tutorial</h2>
+        <p>Python is commonly used for developing websites and software, task automation, data analysis, and data visualisation. Since it's relatively easy to learn, Python has been adopted by many non-programmers, such as accountants and scientists, for a variety of everyday tasks, like organising finances.</p>
+        <p>It can automate tedious tasks, including checking information in databases, data visualisations, financial analysis and much, much more. Learning Python will allow you to save time throughout your life, and it has the bonus of being one of the easier programming languages to learn!
+        </p>
+        <ul>
+            <li><a href="./python.html">Python Introduction</a></li>
+            <li><a href="./python.html">Python Elements</a></li>
+            <li><a href="./python.html">Python Attributes</a></li>
+        </ul>
+    </section>
+
+    <section id="html" class="section">
+        <h2>HTML Tutorial</h2>
+        <p>HTML is used to provide structure to a webpage and make it accessible to users of the internet through text, visual formatting and search factors. It is commonly known as the most basic building block of the web, working alongside CSS and JavaScript to create the websites we see while browsing.
+        </p>
+        <p>HTML stands for Hypertext Markup Language. It is used to create the structure of web pages.</p>
+        <ul>
+            <li><a href="./html.html">HTML Introduction</a></li>
+            <li><a href="./html.html">HTML Elements</a></li>
+            <li><a href="./html.html">HTML Attributes</a></li>
+        </ul>
+    </section>
+
+    <section id="css" class="section">
+        <h2>CSS Tutorial</h2>
+        <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+        </p>
+        <P>CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
+        </P>
+            <ul>
+            <li><a href="./css.html">CSS Introduction</a></li>
+            <li><a href="./css.html">CSS Selectors</a></li>
+            <li><a href="./css.html">CSS Box Model</a></li>
+        </ul>
+    </section>
+
+    <section id="javascript" class="section">
+        <h2>JavaScript Tutorial</h2>
+        <P>JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.
+        </P>
+        <p>Learn JavaScript to make your web pages interactive</p>
+        <ul>
+            <li><a href="./javaScript.html">JavaScript Introduction</a></li>
+            <li><a href="javaScript.html">JavaScript Functions</a></li>
+            <li><a href="javaScript.html">JavaScript Events</a></li>
+        </ul>
+    </section>
+
+    
+
+    <script>
+        function runCode() {
+            var C Code = document.getElementById('CCode').value;
+            var C++ Code = document.getElementById('C++Code').value;
+            var JAVA Code = document.getElementById('javaCode').value;
+            var PYTHON Code = document.getElementById('pythonCode').value;
+            var HTMLCode = document.getElementById('htmlCode').value;
+            var cssCode = document.getElementById('cssCode').value;
+            var jsCode = document.getElementById('jsCode').value;
+
+            var iframe = document.getElementById('result');
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+            iframeDoc.open();
+            iframeDoc.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                        ${cssCode}
+                    </style>
+                </head>
+                <body>
+                    ${htmlCode}
+                    <script>
+                        ${jsCode}
+                    </script>
+                </body>
+                </html>
+            
+            
+        
+    </script>
+</body>
+</html>
