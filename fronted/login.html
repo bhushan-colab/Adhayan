@@ -177,27 +177,6 @@
         <button onclick="login()">Login</button>
         <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
       </div>
-      <script>
-        async function login(password) {
-            try {
-                const account = await connectMetaMask(); // Ensure MetaMask is connected
-                if (!account) return;
-        
-                const passwordHash = web3.utils.sha3(password); // Hashing password
-                const username = await contract.methods.login(passwordHash).call({ from: account });
-        
-                // Show pop-up message for successful login
-                alert(`Login successful! Welcome ${username}`);
-        
-                // Redirect to the home page
-                window.location.href = "homepage1.html"; // Update this with your home page URL
-            } catch (error) {
-                console.error("Login failed:", error);
-                alert("Login failed. Please check the console for details.");
-            }
-        }
-        
-      </script>
        <script src="./script.js"></script> 
        <script src="./web3.js"></script> 
     </body>
