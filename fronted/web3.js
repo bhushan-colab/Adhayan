@@ -1,47 +1,49 @@
 const contractAddress = "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4";
 const contractABI = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_username",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_password",
-				"type": "string"
-			}
-		],
-		"name": "signUp",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_username",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_password",
-				"type": "string"
-			}
-		],
-		"name": "login",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
+	
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "_username",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "_password",
+					"type": "string"
+				}
+			],
+			"name": "signUp",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "_username",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "_password",
+					"type": "string"
+				}
+			],
+			"name": "login",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	
 ];
 if (typeof window.ethereum !== "undefined") {
     console.log("MetaMask is installed!");
