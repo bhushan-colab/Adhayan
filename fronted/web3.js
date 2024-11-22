@@ -45,11 +45,12 @@ const contractABI = [
 		}
 	
 ];
-if (typeof window.ethereum !== "undefined") {
+if (window.ethereum && window.ethereum.isMetaMask) {
     console.log("MetaMask is installed!");
 } else {
     alert("MetaMask is not installed. Please install MetaMask and try again.");
 }
+
 
 const web3 = new Web3(window.ethereum);
 const contract = new web3.eth.Contract(contractABI, contractAddress);
