@@ -58,16 +58,15 @@ const contract = new web3.eth.Contract(contractABI, contractAddress);
 // MetaMask Connection
 async function connectMetaMask() {
     try {
-        const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
         const account = accounts[0];
         console.log("Connected account:", account);
-        alert(`MetaMask connected: ${account}`);
         return account;
     } catch (error) {
         console.error("Error connecting to MetaMask:", error);
-        alert("Failed to connect MetaMask. Please try again.");
     }
 }
+
 
 // Sign-Up Function
 async function signUp(username, password) {
